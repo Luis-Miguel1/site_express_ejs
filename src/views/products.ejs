@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>Teste Embeded js</title>
+</head>
+
+<body>
+    <div class="contianer">
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Produto</th>
+                    <th>Preco</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% products.forEach(function(product) { %>
+                <tr>
+                    <td><%= product.attributes.name %></td>
+                    <td><%= product.attributes.price %></td>
+                    <td><a class="btn-excluir" href="http://localhost:3000<%= product.links.self %>">Excluir</a></td>
+                </tr>
+                <% }) %>
+
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const productList = document.querySelector('table')
+        productList.addEventListener('click', function (event) {
+            event.preventDefault();
+            const btnexcluir = event.target;
+            if (btnexcluir.classList.contains('btn-excluir')) {
+                const url = btnexcluir.href;
+                fetch(url, {
+                    method: 'DELETE',
+                  //  mode: 'no-cors' ,
+                }).then(function () {
+                    btnExcluir.parentNode.parentNode.remove();
+                })
+            }
+        })
+    </script>
+</body>
+
+</html>
