@@ -1,2 +1,2 @@
-# API-rest-haipi.js
-Uma aplicacao(API) feita em node ,utilizando  o framework haipi.js , armazenando os dados no mongodb
+# site_express_ejs
+Uma aplicacao express feita em node ,utilizando  o template engine ejs.js , armazenando os dados no mongodb
