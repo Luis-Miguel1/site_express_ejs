@@ -1,5 +1,5 @@
 # site_express_ejs
-Uma aplicacao express  ,utilizando  o template engine ejs.js , armazenando os dados no mongodb
+Uma aplicacao express  ,utilizando  o template engine "ejs.js" , para apresentar dados e "request-promise-native" para fazer requesicao para API
 
 
 commands: npm start: run the project,
