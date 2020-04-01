@@ -1,2 +1,7 @@
 # site_express_ejs
-Uma aplicacao express feita em node ,utilizando  o template engine ejs.js , armazenando os dados no mongodb
+Uma aplicacao express  ,utilizando  o template engine ejs.js , armazenando os dados no mongodb
+
+
+commands: npm start: run the project,
+
+Requirements Nodejs, NPM ,Nodemon, ejs
